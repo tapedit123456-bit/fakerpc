@@ -1,0 +1,7 @@
+
+services:
+  - type: web
+    name: discord-rpc-auth-server
+    env: python
+    buildCommand: pip install -r requirements_server.txt
+    startCommand: gunicorn auth_server_render:app
